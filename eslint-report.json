@@ -1,0 +1,94 @@
+[
+    {
+        "filePath": "/Users/sxltan1453/Documents/Semester5/SDLC/ESLintForSecurityAnalysis/case4 - redos vulnerable regex (input validator)/controllers/validateController.js",
+        "messages": [
+            {
+                "ruleId": "no-unused-vars",
+                "severity": 2,
+                "message": "'err' is defined but never used.",
+                "line": 8,
+                "column": 12,
+                "nodeType": "Identifier",
+                "messageId": "unusedVar",
+                "endLine": 8,
+                "endColumn": 15
+            }
+        ],
+        "suppressedMessages": [],
+        "errorCount": 1,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "source": "import { isValidUsername } from \"../services/validateService.js\";\r\n\r\nexport function checkUsername(req, res) {\r\n  const { u } = req.query;\r\n  try {\r\n    const ok = isValidUsername(u);\r\n    res.json({ username: u, valid: ok });\r\n  } catch (err) {\r\n    res.status(500).json({ error: \"Validation failed\" });\r\n  }\r\n}\r\n",
+        "usedDeprecatedRules": []
+    },
+    {
+        "filePath": "/Users/sxltan1453/Documents/Semester5/SDLC/ESLintForSecurityAnalysis/case4 - redos vulnerable regex (input validator)/eslint.config.cjs",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": []
+    },
+    {
+        "filePath": "/Users/sxltan1453/Documents/Semester5/SDLC/ESLintForSecurityAnalysis/case4 - redos vulnerable regex (input validator)/models/validateModel.js",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": []
+    },
+    {
+        "filePath": "/Users/sxltan1453/Documents/Semester5/SDLC/ESLintForSecurityAnalysis/case4 - redos vulnerable regex (input validator)/routes/validateRoutes.js",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": []
+    },
+    {
+        "filePath": "/Users/sxltan1453/Documents/Semester5/SDLC/ESLintForSecurityAnalysis/case4 - redos vulnerable regex (input validator)/server.js",
+        "messages": [
+            {
+                "ruleId": "no-undef",
+                "severity": 2,
+                "message": "'console' is not defined.",
+                "line": 8,
+                "column": 24,
+                "nodeType": "Identifier",
+                "messageId": "undef",
+                "endLine": 8,
+                "endColumn": 31
+            }
+        ],
+        "suppressedMessages": [],
+        "errorCount": 1,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "source": "import express from \"express\";\r\nimport validateRoutes from \"./routes/validateRoutes.js\";\r\n\r\nconst app = express();\r\napp.use(express.json());\r\napp.use(\"/validate\", validateRoutes);\r\n\r\napp.listen(3004, () => console.log(\"Case4 server listening on 3004\"));\r\n",
+        "usedDeprecatedRules": []
+    },
+    {
+        "filePath": "/Users/sxltan1453/Documents/Semester5/SDLC/ESLintForSecurityAnalysis/case4 - redos vulnerable regex (input validator)/services/validateService.js",
+        "messages": [],
+        "suppressedMessages": [],
+        "errorCount": 0,
+        "fatalErrorCount": 0,
+        "warningCount": 0,
+        "fixableErrorCount": 0,
+        "fixableWarningCount": 0,
+        "usedDeprecatedRules": []
+    }
+]
